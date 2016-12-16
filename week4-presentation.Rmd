@@ -1,0 +1,44 @@
+---
+title: "Data Products Course Week 4 Project - MTCars Data Set"
+author: "Mohamed Ali"
+date: "December 16, 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This presentation is a part of deliverables required for Data Products Course week 4 project.
+
+The application demo built by Shiny and can be found at the URL:
+https://mam-moneim.shinyapps.io/ShinyApp/
+
+Source code is at GitHub for the application and presnetation at the URL:
+https://github.com/mmonim/Coursera-Data-Products-Week-4-Project
+
+## Web Application
+
+This web application provides user with a slider to select the bin size of MPG (Miles per Gallon) attribute with MTCars dataset. The application (server side) will plot a histogram depicting the frequency of repition of this MPG at the MTCars dataset.
+
+## Cars data set
+
+This isthe data of MTCars Dataset and MPG column where we build a histogram for this across all data at the dataset.
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Sample Layout
+
+```{r, echo=FALSE, message=FALSE}
+
+library(plotly)
+data("mtcars")
+x <- mtcars[,1]
+hist(x, breaks= 20, col='darkgray',border='white',main=paste("Histogram of MPG"),xlab="MPG")
+```
+
+
